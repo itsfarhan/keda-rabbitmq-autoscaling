@@ -57,12 +57,11 @@ Go to Management console [http://localhost:15672/](http://localhost:15672/)
  5. **Deploy RabbitMQ Consumer**: Deploy a RabbitMQ consumer application to Kubernetes. This application will consume messages from the RabbitMQ queue.
  
 
->     #First deploy the deployment yaml file
 >     kubectl apply -f rabbitmq-consumer-deployment.yaml -n keda-cluster
 
 6.  **Configure KEDA ScaledObject**: Create a ScaledObject resource in Kubernetes to configure KEDA to monitor the RabbitMQ queue length and trigger autoscaling based on queue metrics.
 
->     #Next, deploy keda scaledobject file
+
 >     kubectl apply -f rabbitmq-scaledobject.yaml -n keda-cluster
     
 7.  **Test Autoscaling**: 
@@ -72,10 +71,9 @@ Send messages to the RabbitMQ queue and observe the autoscaling behavior of your
 
 8. **Monitor Autoscaling**:
 Monitor the application pods and scaling events:
- 
 
-> kubectl get pods -l app=rabbitmq-consumer -n keda-cluster
-> kubectl describe scaledobject rabbitmq-scaledobject -n keda-cluster
+>     kubectl get pods -l app=rabbitmq-consumer -n keda-cluster 
+>     kubectl describe scaledobject rabbitmq-scaledobject -n keda-cluster
 
  
 ## Files and Directory Structure
