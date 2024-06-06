@@ -6,6 +6,9 @@ This project demonstrates how to autoscale RabbitMQ consumer applications using 
 
 In this project, we'll set up a RabbitMQ server, deploy a RabbitMQ consumer application to Kubernetes, configure KEDA to monitor the RabbitMQ queue length, and observe autoscaling behavior based on the queue load.
 
+![keda-rabbitmq](https://github.com/itsfarhan/keda-rabbitmq-autoscaling/assets/36396433/ef3fd23a-e3a1-45dd-afa1-f730639c5c70)
+
+
 ## Prerequisites
 
 -   Kubernetes cluster (e.g., KIND, Minikube, GKE, AKS, EKS)
